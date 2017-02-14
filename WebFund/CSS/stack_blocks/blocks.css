@@ -1,0 +1,49 @@
+#wrapper {
+    background-color: grey;
+    height: 800px;
+    width: 1377px;
+    padding: 20px;
+}
+
+#green {
+    background-color: green;
+    height: 200px;
+    margin: 25px;
+    width: 1333px;
+}
+
+#blue {
+    background-color: blue;
+    height: 450px;
+    width: 292px;
+    margin-left: 26px;
+}
+
+#red {
+    background-color: red;
+    height: 545px;
+    width: 1000px;
+    position: relative;
+    top: -448px;
+    left: 360px;
+    display: inline-block;
+}
+.yellow {
+    display: inline-block;
+    background-color: yellow;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    top: 20px;
+    left: 4px;
+}
+
+#purple {
+    background-color: purple;
+    position:absolute;
+    height: 133px;
+    width: 959px;
+    top: 360px;
+    left: 9px;
+}

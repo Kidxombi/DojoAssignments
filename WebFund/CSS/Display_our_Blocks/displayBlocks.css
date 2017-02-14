@@ -1,0 +1,52 @@
+#wrapper {
+	background-color: beige;
+	position: relative;
+	width: 1200px;
+	height: 500px;
+	padding: 15px;
+	margin:auto
+}
+
+img{
+	height: 200px;
+	width: 200px;
+}
+
+header {
+	position: relative;
+	left: 240px;
+}
+table {
+	position: relative;
+	left: 7px;
+}
+
+header img, header h1 {
+	display: inline-block;
+	padding: 15px;
+	position: relative;
+	left: 20px;
+	top: 20px;
+}
+header h1 {
+	font-size: 36px;
+}
+
+header img {
+	height: 75px;
+	width: 150px;
+}
+
+
+td {
+	border: 5px solid black;
+	padding: 15px;
+}
+
+.red {
+	background-color: red;
+}
+
+.blue {
+	background-color: blue;
+}

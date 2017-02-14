@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Number Game</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='skeleton.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+	</head>
+	<body>
+		<div class="container">
+
+
+			<div class="row">
+				<h1 class="twelve columns">I am thinking of a number between 1 - 100...</h1>
+			</div>
+			<div class="row">
+				<h2 class="eight columns offset-by-three">Care to take a guess??</h2>
+			</div>
+
+			<div class="row">
+				<!-- this is where the flaskBox will go! -->
+				<div class="{{ session['response'] }} five columns offset-by-three text-center">
+					<h2>{{ session['response'] }}</h2>
+				</div>
+			</div>
+
+
+
+
+
+
+			<form action="/logic" method="post">
+
+				<div class="row">
+					<input class="five columns offset-by-three guess" type="text" name="guess" placeholder="Take a guess..." id="guess">
+				</div>
+
+				<div class="row">
+					<input class="three columns offset-by-four btn" type="submit" name="btn" value="Guess!">
+				</div>
+
+			</form>
+		</div>
+	</body>
+</html>

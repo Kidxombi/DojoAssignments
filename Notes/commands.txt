@@ -1,0 +1,15 @@
+- cd Desktop
+- mkdir test; cd test
+- touch index.html styles.css aboutMe.txt
+- git init
+- git add .
+- git commit -m "This is the first commit"
+- echo "Bio: I am Sam, Sam I am." >> aboutMe.txt
+- git add aboutMe.txt
+- git commit -m "Updated aboutMe.txt"
+- echo "Favorite Movie: Waking Life" >> aboutMe.txt
+- git add aboutMe.txt
+- git commit -m "Added favorite movie to aboutMe.txt"
+- git log
+- git revert HEAD
+- git commit -m "This is my last commit"

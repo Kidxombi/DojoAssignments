@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Sam's Registration From.</title>
+		<meta name="description" content="This is Sam Bragge's registration form.
+					Made for the Coding Dojo on 1-23-17"/>
+	</head>
+	<body>
+		<form>
+			<h2>My Registration Form</h2>
+			<table cellpadding="10">
+
+				<tbody>
+					<tr>
+						<td>
+							First Name:
+						</td>
+						<td>
+							<input type="text" name="firstName"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Last Name:
+						</td>
+						<td>
+							<input type="text" name="lastName"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Email:
+						</td>
+						<td>
+							<input type="text" name="email"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Password:
+						</td>
+						<td>
+							<input type="password" name="passwd"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							PW Confirm:
+						</td>
+						<td>
+							<input type="password" name="confirm"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Birthday:
+						</td>
+						<td>
+							<input type="date" name="bday"/>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				<label>
+					<input type="radio" name="gender" value="male"/>Male
+					<input type="radio" name="gender" value="female"/>Female
+					<input type="radio" name="gender" value="other"/>Other
+				</label>
+			</p>
+			<p>
+				A short description about yourself.
+			</p>
+			<p>
+				<label>
+					<textarea name="desc"></textarea>
+				</label>
+			</p>
+			<p>
+				<label>
+					Favorite Language:&nbsp;&nbsp;&nbsp;&nbsp;<select>
+						<option value="js">JavaScript</option>
+						<option value="python">Python</option>
+					</select>
+				</label>
+			</p>
+			<p>
+				<label>
+					<input type="submit" value="submit"/>
+				</label>
+			</p>
+		</form>
+	</body>
+</html>

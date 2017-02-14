@@ -1,0 +1,34 @@
+.gold-box {
+	height: 50px;
+	border: 2px solid red;
+}
+.loc-box {
+	height: 250px;
+	border: 2px solid green;
+}
+.container {
+	margin-top: 5%;
+}
+.act-box {
+	height: 300px;
+	border: 2px solid blue;
+}
+.row {
+	margin-bottom: 15px;
+}
+.loc-box * {
+	margin: 10px 0 0 25px;
+}
+
+.gold-box {
+	text-align: center;
+	padding: 1px;
+}
+.gold-box h3 {
+	color: gold;
+}
+
+.act-box {
+	overflow-y: scroll;
+	padding: 5px;
+}

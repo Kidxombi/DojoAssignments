@@ -1,0 +1,38 @@
+div {
+    margin: 20px;
+    display: inline-block;
+}
+
+.square {
+    height: 400px;
+    width: 400px;
+    background-color: blue;
+}
+
+.circle {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.triangle {
+    height: 0px;
+    width: 0px;
+    border-bottom: 400px solid blue;
+    border-left: 200px solid transparent;
+    border-right:  200px solid transparent;
+}
+
+.pac-man {
+    width: 0;
+    height: 0;
+    border-right: 200px solid transparent;
+    border-top: 200px solid blue;
+    border-left: 200px solid blue;
+    border-bottom: 200px solid blue;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}

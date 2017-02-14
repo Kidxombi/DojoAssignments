@@ -1,0 +1,143 @@
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0px 0 0 0;
+	margin: 0px 0px 0px 0px;
+}
+
+html, body {
+	height: 100%
+}
+
+.wrapper {
+	background-color: lightgrey;
+	height: 100%;
+	width: 85%;
+	margin: auto;
+	padding: 15px;
+}
+
+header {
+	background: linear-gradient(turquoise, darkturquoise);
+	height: 10%;
+}
+header * {
+	display: inline-block;
+	vertical-align: top;
+}
+.header-left {
+	border: 1px dotted red;
+	width: 30%;
+	height: 100%;
+	text-align: left;
+
+}
+.header-left img {
+	height: 80%;
+	margin: 9px 10px 0 11px;
+}
+.header-left h1 {
+	font-size: 40px;
+	margin: 19px 0px 0 0;
+	font-family: "Lucida Console", Monaco, monospace
+}
+
+
+.header-right {
+	border: 1px dotted red;
+	height: 100%;
+	width: 69.4%;
+	text-align: right;
+}
+.header-right a {
+	color: white;
+}
+.header-right li {
+	margin: 29px 28px 0 0;
+	font-size: 16px;
+	font-family: "Lucida Console", Monaco, monospace
+}
+
+.content {
+	height: 75%;
+	background-color: lightyellow;
+	margin: 20px 0 20px 0;
+	padding: 5px;
+}
+.content div {
+	display: inline-block;
+	border-radius: 5px;
+	background: linear-gradient(teal, darkgreen);
+	padding: 8px;
+
+}
+.content div * {
+	color: white;
+	font-family:"Lucida Console", Monaco, monospace;
+	margin-bottom: 42px;
+}
+.content div h1 {
+	font-weight: bold;
+	font-size: 30px;
+}
+.content div p {
+	font-size: 18px;
+	margin-left: 25px;
+	text-indent: 25px;
+}
+.content-1 {
+	height: 90%;
+	width: 25%;
+	margin: 30px 0 0px 21px;
+}
+.content-2, .content-3, .content-4 {
+	height: 31%;
+	width: 17%;
+	vertical-align: top;
+	margin: 15px -10px 0px 77px;
+}
+.content-5, .content-6 {
+	height: 30%;
+	width: 30%;
+	margin: 0px -45px 0px 76px;
+	position: relative;
+	top: -412px;
+	left: 390px;
+}
+.content-7 {
+	height: 23%;
+	width: 64%;
+	position: relative;
+	top: -396px;
+	left: 465px;
+}
+
+
+
+
+footer {
+	background: linear-gradient(turquoise, darkturquoise);
+	height: 10%;
+	text-align: center;
+}
+footer p {
+	font-family: "Lucida Console", Monaco, monospace;
+	position: relative;
+	top:40px;
+}
+
+.content div p span {
+	color: turquoise;
+}
+a:hover {
+	color: orange;
+	margin-top: 5px;
+}
+img:hover {
+	height: 105%;
+}

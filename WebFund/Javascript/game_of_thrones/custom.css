@@ -1,0 +1,63 @@
+.box {
+	height: 300px;
+	width: 300px;
+
+}
+
+.container {
+	padding: 10px;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+
+}
+
+#results {
+	background: linear-gradient(to bottom right, lightgrey, grey, darkgrey);
+	height: 550px;
+	margin-top: 25px;
+	padding: 20px;
+	box-shadow: inset 0 0 50px black;
+}
+#results h2, #results h4 {
+	font-family: monospace;
+}
+
+h2 {
+	border-bottom: 2px groove grey;
+	width: 50%;
+}
+
+#baratheon {
+	box-shadow: 0 0 75px green;
+	border: 25px solid darkgreen;
+	border-bottom: 50px solid lightgreen;
+	border-top: 40px solid lightgreen;
+}
+
+#targaryen {
+	box-shadow: 0 0 75px red;
+	border: 25px solid darkred;
+	border-bottom: 50px solid orange;
+	border-top: 40px solid orange;
+}
+
+#lannister {
+	box-shadow: 0 0 75px gold;
+	border: 25px solid gold;
+	border-bottom: 50px solid yellow;
+	border-top: 40px solid yellow;
+}
+
+#stark {
+	box-shadow: 0 0 75px darkgrey;
+	border: 25px solid grey;
+	border-bottom: 50px solid lightgrey;
+	border-top: 40px solid lightgrey;
+}
+
+body {
+	background-image: url("http://drwallpaper.com/wp-content/uploads/2016/01/game_of_thrones_wallpaper_hd_background_download_desktop4.jpg");
+}

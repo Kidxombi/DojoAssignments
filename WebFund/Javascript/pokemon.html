@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon Exercize</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+            function addListItems(arr){
+                for (var i = 0; i < arr.length; i++) {
+                    $('.pokedex').append("<li>"+ arr[i].name +"</li>")
+                }
+            }
+
+            function gen_img_handlers(){
+              $('img').click(function(){
+                  var pokemon = $(this).attr('id');
+                  $.get('http://pokeapi.co/api/v1/pokemon/'+pokemon+'/', function(res){
+                      console.log(res);
+                      $('.pokedex').html("<h1>"+ res.name +"</h1><img src='http://pokeapi.co/media/img/"+ pokemon +".png'></img><h3>Types</h3><ul>");
+                      addListItems(res.types);
+                      $('.pokedex').append("</ul><h3>Height</h3><p>"+ res.height +"</p><h3>Weight</h3><p>"+ res.weight +"</p>")
+
+                  }, 'json');
+              })
+          };
+
+            $(document).ready(function(){
+                gen_img_handlers();
+                for (var i = 1; i<=151; i++){
+                  $('.pokemon').append("<img id='"+i+"' src='http://pokeapi.co/media/img/"+i+".png'>")
+                }
+                gen_img_handlers();
+              });
+
+    </script>
+    <style media="screen">
+
+        div {
+            display: inline-block;
+        }
+        body {
+            background: linear-gradient(to bottom left, lightblue, blue, darkblue)
+        }
+        .pokemon{
+          height:100%;
+          width:800px;
+          box-shadow: inset 8px 8px 14px black;
+          padding: 20px;
+          background: linear-gradient(to top right, lightgrey, grey, darkgrey)
+        }
+        .pokedex {
+            border: 15px solid red;
+            height: 600px;
+            width: 300px;
+            vertical-align: top;
+            position: fixed;
+            box-shadow: inset 8px 8px 14px black;
+            padding: 10px;
+            background: linear-gradient(to top right, pink, red, orange)
+        }
+        .pokedex * {
+            margin-left: 20px;
+        }
+
+        img{
+          height:100px;
+          width: 100px;
+        }
+
+    </style>
+  </head>
+  <body>
+
+        <div class="pokemon">
+              <!-- this is where our pokemon will go -->
+
+        </div>
+        <div class="pokedex">
+            <!-- this is where a pokemons information will display when it is clicked -->
+        </div>
+
+  </body>
+</html>

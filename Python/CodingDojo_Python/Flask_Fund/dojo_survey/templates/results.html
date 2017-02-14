@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Results Page</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='skeleton.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h1 class="result-header eight columns">Submitted Info</h1>
+			</div>
+			<div class="row">
+				<h2 class="four columns">Name: </h2>
+				<h2 class="four columns">{{ request.form['name'] }}</h2>
+			</div>
+			<div class="row">
+				<h2 class="four columns">Dojo Location: </h2>
+				<h2 class="four columns">{{ request.form['location'] }}</h2>
+			</div>
+			<div class="row">
+				<h2 class="four columns">Favorite Language: </h2>
+				<h2 class="four columns">{{ request.form['lang'] }}</h2>
+			</div>
+			<div class="row">
+				<h2 class="four columns">Comment: </h2>
+				<h2 class="four columns">{{ request.form['comment'] }}</h2>
+			</div>
+			<a href="/">Go Back</a>
+		</div>
+	</body>
+</html>

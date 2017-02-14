@@ -1,0 +1,36 @@
+
+.container {
+	margin-top: 10%;
+}
+.row {
+	margin-bottom: 5%;
+}
+.Too-High , .Too-Low, .You-Win {
+	height: 350px;
+	width: 350px;
+	text-align: center;
+	padding: 5px;
+}
+
+.Too-High  *, .Too-Low *, .You-Win * {
+	margin-top: 30px;
+}
+.Too-High {
+	box-shadow: inset 0 0 30px black;
+	background: linear-gradient(to top right, pink, red, darkred)
+}
+.Too-Low {
+	box-shadow: inset 0 0 30px black;
+	background: linear-gradient(to top right, lightyellow, yellow, gold)
+}
+.You-Win {
+	box-shadow: inset 0 0 30px black;
+	background: linear-gradient(to top right, lightblue, blue, darkblue)
+}
+.none {
+	height: 0;
+	width: 0;
+}
+.none h2 {
+	color: white;
+}

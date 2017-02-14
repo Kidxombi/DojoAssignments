@@ -1,0 +1,41 @@
+#hcontainer {
+	background-color: #42adf4;
+}
+#hcontainer ul li {
+	display: inline;
+	margin: auto 23px;
+}
+#hcontainer ul li a {
+	text-decoration: none;
+	color:white;
+	font-size: 80px;
+}
+#hcontainer ul li a:hover{
+	color:green;
+}
+#hcontainer ul {
+	list-style-type: none;
+	margin: auto 0;
+}
+
+#vcontainer {
+	background: grey;
+	float: left;
+	margin-top: 15px;
+}
+#vcontainer ul {
+	list-style-type: none;
+	padding:10px 20px;
+}
+#vcontainer ul li {
+	margin: 23px auto;
+	display: block;
+}
+#vcontainer ul li a {
+	text-decoration: none;
+	color:white;
+	font-size: 80px;
+}
+#vcontainer ul li a:hover {
+	color: red;
+}

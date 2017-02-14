@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>From Page</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='skeleton.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+		<div class="form-box">
+			<form action="/results" method="post" class="container">-
+				<div class="row">
+					<label for="name" class="four columns">Your Name:</label>
+					<input type="text" name="name" id="name" class="four columns">
+				</div>
+				<div class="row">
+					<label for="location" class="four columns">Dojo Location</label>
+					<select class="four columns" name="location" id="location">
+						<option value="San Jose">San Jose</option>
+						<option value="Seattle">Seattle</option>
+					</select>
+				</div>
+				<div class="row">
+					<label for="lang" class="four columns">Favorite Language</label>
+					<select class="four columns" name="lang" id="lang">
+						<option value="python">Python</option>
+						<option value="javascript">JavaScript</option>
+						<option value="ruby">Ruby</option>
+					</select>
+				</div>
+				<div class="row">
+					<label for="comment" class="four columns">Comment (optional)</label>
+				</div>
+				<div class="row">
+					<textarea name="comment" id="comment" class="ten columns"></textarea>
+				</div>
+				<div class="row">
+					<input type="submit" name="submit" value="Button" class="three columns offset-by-eight button">
+				</div>
+			</form>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="eleven columns flash-box">
+					{% with messages = get_flashed_messages() %}
+						{% if messages %}
+							{% for message in messages %}
+								<p class="flash-p">{{ message }}</p>
+							{% endfor %}
+						{% endif %}
+					{% endwith %}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

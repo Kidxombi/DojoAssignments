@@ -1,0 +1,22 @@
+.container {
+  margin-top: 5%;
+}
+.row {
+  margin-top: 5%;
+}
+
+.res-box {
+  border: 1px dotted red;
+  height: 150px;
+  text-align: center;
+  padding: 10px;
+}
+.good {
+  background-color: green;
+}
+.bad {
+  background-color: red;
+}
+.button {
+  background: linear-gradient(to top right, pink, orange, red, darkred)
+}

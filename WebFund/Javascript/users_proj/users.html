@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Users Project</title>
+		<meta name="description" content="This is the users project for the dojo"/>
+
+		<style>
+			h1 {
+				width: 25%;
+				border-bottom: 3px groove black;
+			}
+			#table {
+				border: 2px solid black;
+				border-collapse: collapse;
+			}
+			#table td {
+				border: 2px groove black;
+				padding: 5px;
+			}
+			#table th {
+				border: 1px groove black;
+				padding: 5px;
+			}
+			#submit {
+				border: 2px groove black;
+				background-color: lightgreen;
+				color: black;
+			}
+			#submit:hover {
+				border: 2px groove green;
+				background-color: black;
+				color: lightgreen;
+			}
+
+
+		</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('form').submit(function(){
+					$('#table tbody').append("<tr><td>"+ $("#first_name").val() +"</td><td>"+ $("#last_name").val() +"</td><td>"+ $("#email").val() +"</td><td>"+ $("#number").val() +"</td></tr>")
+					return false;
+				})
+
+
+
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<table id="table">
+				<thead>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Address</th>
+					<th>Contact #</th>
+				</thead>
+				<tbody>
+					<!-- this is where the new data where be appended -->
+				</tbody>
+			</table>
+			<h1>Add User</h1>
+			<form>
+				<table id="form-table">
+					<tbody>
+						<tr>
+							<td>
+								First Name
+							</td>
+							<td>
+								<input id="first_name" type="text" name="first_name" value="First Name"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Last Name
+							</td>
+							<td>
+								<input id="last_name" type="text" name="last_name" value="Last Name"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Email Address
+							</td>
+							<td>
+								<input id="email" type="text" name="email" value="Email Address"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Contact No
+							</td>
+							<td>
+								<input id="number" type="text" name="number" value="Phone #"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<input id="submit" type="submit" name="submit" value="Add User"/>
+			</form>
+		</div>
+	</body>
+</html>

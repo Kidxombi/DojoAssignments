@@ -1,0 +1,137 @@
+* {padding:0px;
+margin: 0px}
+html, body{
+  height: 100%;
+}
+.container{
+  width: 960px;
+  height: 96%;
+  background-color: #F8F8F7;
+  margin: 0px 0 0 0;
+  padding: 0px 0 0 0;
+}
+header{
+  height:150px;
+  border: 2px solid black;
+}
+header div{
+  height: 100%;
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+}
+header div img{
+  height:100%;
+}
+header div h1{
+  margin: 60px -8px 0 0;
+text-align: right;
+font-size: 25px;
+}
+.nav div{
+  display: inline-block;
+  text-align: center;
+  height: 38px;
+  border: 1px solid black;
+  margin: 0px -5px 0px 0px;
+  padding: 0px 38px 0px 39px;
+}
+.nav div a{
+  position: relative;
+  top: 10px;
+}
+.main{
+  height: 100%;
+  background: #372F44;
+  padding: 5 5 5 5;
+}
+.maintop, .mainbottom , .middle{
+}
+.maintop{
+  height: 300px;
+}
+.maintop div{
+  display: inline-block;
+}
+.leftbox{
+  display:inline-block;
+  width: 48%;
+  height: 100%;
+  background-color: gray;
+  padding:5px;
+}
+.leftbox img{
+  width: 100%;
+  height: 100%;
+}
+
+.rightbox{
+  background: linear-gradient(to top right, white,gray);
+  width:48%;
+  height: 100%;
+  vertical-align: top;
+  padding: 5px;
+}
+.rightbox h1{
+  background:linear-gradient(white, grey);
+  width: 100%;
+  height: 100%;
+  padding: 4px 83px 0 0;
+  margin: -2px 0 0 0;
+}
+
+.rightbox p{
+  margin-top: 10px;
+  text-indent: 50px;
+}
+.middle{
+  text-align: right;
+  height:30px;
+}
+.middle img{
+  height:10px;
+}
+.middle *{
+  margin-top: 15px;
+  display: inline-block;
+}
+.mainbottom{
+  text-align: center;
+}
+.mainbottom img{
+width: 100%;
+height: 200px;
+padding: 10px 0px;
+}
+.bottombox{
+  border: 2px solid black;
+  background: linear-gradient(grey,white);
+  height: 100%;
+  width: 23%;
+  display: inline-block;
+  margin: 0px 5px;
+  padding-bottom: 8px;
+}
+.bottombox p{
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 0px 5px;
+}
+a:hover{
+  color: red;
+}
+a:active{
+  font-weight: bold;
+}
+
+.bottombox input{
+  background-color: #5D729A;
+  border: 3px solid black;
+  padding: 2px;
+  margin: 58px -98px 0px 0;
+  color: white;
+  border-radius: 5px;
+  height: 25px;
+  width: 70px;
+  box-shadow: 5px 5px 5px black;
+}

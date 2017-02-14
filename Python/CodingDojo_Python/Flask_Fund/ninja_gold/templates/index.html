@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ninja Gold</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='skeleton.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h3 class="three columns">Your Gold: </h3>
+				<div class="four columns gold-box"><h3>{{ session['gold'] }}</h3></div>
+				<form action="/process_money" method="post">
+					<input class="two columns offset-by-one" type="submit" name="btn" value="Reset">
+				</form>
+			</div>
+			<div class="row">
+				<div class="three columns loc-box farm">
+					<h2>Farm</h2>
+					<h6>(earns 10-20 gold)</h6>
+					<form class="farm btn" action="/process_money" method="post">
+						<input type="submit" name="button" value="Get Gold">
+						<input type="hidden" name="btn" value="farm">
+					</form>
+				</div>
+				<div class="three columns loc-box cave">
+					<h2>Cave</h2>
+					<h6>(earns 5-10 gold)</h6>
+					<form class="cave btn" action="/process_money" method="post">
+						<input type="submit" name="button" value="Get Gold">
+						<input type="hidden" name="btn" value="cave">
+					</form>
+				</div>
+				<div class="three columns loc-box house">
+					<h2>House</h2>
+					<h6>(earns 2-5 gold)</h6>
+					<form class="house btn" action="/process_money" method="post">
+						<input type="submit" name="button" value="Get Gold">
+						<input type="hidden" name="btn" value="house">
+					</form>
+				</div>
+				<div class="three columns loc-box casino">
+					<h2>Casino</h2>
+					<h6>(earn/lose 0-50 gold)</h6>
+					<form class="casino btn" action="/process_money" method="post">
+						<input type="submit" name="button" value="Get Gold">
+						<input type="hidden" name="btn" value="casino">
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<h3 class="three columns">Activities: </h3>
+				<div class="act-box twelve columns">
+					{{ session['log'] | safe}}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

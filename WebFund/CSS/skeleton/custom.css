@@ -1,0 +1,64 @@
+html, body {
+	height: 100%;
+}
+
+header {
+	padding: 75px;
+	background: linear-gradient(to bottom right, white, lightgrey, grey, darkgrey, black);
+	background-attachment: fixed;
+}
+header p {
+	font-size: 26px;
+
+}
+
+section {
+	height: 80%;
+}
+.about-me {
+	background-image: url("images/darkTower.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 100px;
+}
+
+.about-me p {
+	color: white;
+	background-color: rgb(208, 207, 204, 0.9);
+	border-radius: 10px;
+
+}
+
+.what-im-doing {
+	padding: 100px;
+	background: linear-gradient(darkblue, blue, lightblue, white);
+	background-attachment: fixed;
+}
+.what-im-doing p {
+	font-size: 26px;
+	border-right: 5px groove blue;
+	border-bottom: 5px groove blue;
+	padding: 8px;
+	text-indent: 50px;
+	font-weight: 400;
+}
+
+.dojo-vid {
+	box-shadow: 5px 5px 10px darkblue;
+}
+
+.red {
+	color: red !important;
+}
+
+button {
+	background: linear-gradient(white, lightgrey, grey, darkgrey);
+}
+
+
+b {
+	color: black;
+}
+input {
+	text-align: center;
+}

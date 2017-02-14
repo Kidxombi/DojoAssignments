@@ -1,0 +1,12 @@
+- cd dojoBin
+- git init
+- git add *
+- git commit -m "first commit"
+- git remote add origin https://github.com/Kidxombi/DojoAssignments.git
+- git push -u origin master
+- echo "This is where I will store my work for the Dojo!" > readMe.md
+- git add *
+- git commit -m "first commit"
+- git status
+- git push -u origin master
+- 

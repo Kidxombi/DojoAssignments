@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Registration Form</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='skeleton.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+		<form class="login-form" action="/logic" method="post">
+			<div class="container">
+
+				<div class="row">
+					<div class="six columns">
+
+
+						<label for="e-mail">Email</label>
+						<input type="text" name="e-mail" id="e-mail">
+
+						<label for="f-name">First Name</label>
+						<input type="text" name="f-name" id="f-name">
+
+						<label for="l-name">Last Name</label>
+						<input type="text" name="l-name" id="l-name">
+
+						<label for="pw">Password</label>
+						<input type="password" name="pw" id="pw">
+
+						<label for="cpw">Confirm Password</label>
+						<input type="password" name="cpw" id="cpw">
+
+						<label for="b-day">Birthday</label>
+						<input type="text" name="b-day" id="b-day" placeholder="mm/dd/yyy">
+
+						<input class="button-primary" type="submit" name="submit" value="Submit!">
+
+
+					</div>
+
+					</div>
+					<div class="row">
+						<div class="five columns val">
+							{% with messages = get_flashed_messages() %}
+								{% if messages %}
+									{% for message in messages %}
+										<p class="flash-p">{{ message }}</p>
+									{% endfor %}
+								{% endif %}
+							{% endwith %}
+						</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

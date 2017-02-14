@@ -1,0 +1,63 @@
+#page {
+	height:auto;
+	width: 100%;
+}
+header {
+	height:150px;
+	background-color: #4F98B0;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+header ul {
+	list-style-type: none;
+	position: absolute;
+	left: 83%;
+
+}
+header ul li {
+	display: inline;
+	margin: auto 10px;
+}
+header ul li a {
+	text-decoration: none;
+	color:white;
+	font-size: 25px;
+}
+header ul li a:hover {
+	color: purple;
+}
+header h1 {
+	color:white;
+	font-size: 48px;
+	position: absolute;
+	left: 100px;
+
+}
+#left {
+	float: left;
+	position: relative;
+}
+#left img {
+	height: 75%;
+	width: 75%;
+	display: block;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+#right {
+	float: right;
+	position: relative;
+}
+#right p {
+	text-indent: 75px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 100px;
+}
+.content {
+	height: 750px;
+	width: 50%;
+}

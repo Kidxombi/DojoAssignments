@@ -1,0 +1,38 @@
+form {
+	border: 3px solid black;
+	height: 500px;
+	width: 500px;
+	background: linear-gradient(to bottom left, white, beige, silver, beige, white)
+}
+
+.container {
+	margin-top: 10%;
+
+}
+
+.container * {
+	margin-left: 5%;
+	margin-top: 5px;
+}
+
+textarea {
+	height: 150px;
+}
+
+form .button {
+	background: linear-gradient(to top left, lightblue, blue, darkblue);
+	box-shadow: 5px 5px 15px black;
+	color: white;
+}
+
+.result-header {
+	border-bottom: 3px groove black;
+}
+
+.flash-box {
+	height: 200px;
+	margin-top: -175px;
+}
+.flash-p {
+	color: red;
+}

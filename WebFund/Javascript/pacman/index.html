@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <style media="screen">
+
+      body {
+          background-color: black;
+      }
+
+      div#world {
+
+      }
+
+      div.row div {
+          height: 20px;
+          width: 20px;
+          display: inline-block;
+      }
+      div.brick {
+          background-color: blue;
+      }
+      div.coin {
+          background: url('images/coin.gif');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+      }
+      div.empty {
+
+      }
+      div#pacman {
+          background: url('images/pacman.gif');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          height: 20px;
+          width: 20px;
+      }
+	  .container {
+		  box-shadow: inset 0 0 35px darkgrey;
+		  margin-top: 100px;;
+		  text-align: center;
+	  }
+
+  </style>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+
+
+    <div class="container">
+
+
+			<div id="world"></div>
+        	<div id="pacman"></div>
+
+
+
+    </div>
+
+    <script>
+        // List of features to build.
+        //
+        // 1) have JS display the bricks/coins/etc.. DONE!
+        // 2) have pacman move up and down.
+
+
+        var world = [
+            [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+            [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+        ]
+
+        function display_world(){
+            var output = "";
+            for (var i = 0; i < world.length; i++) {
+                output += "\n<div class='row'>";
+                for(var j = 0; j <= world[i].length; j++){
+
+                    if(world[i][j] == 2){
+                        output += "<div class='brick'></div>";
+                    }
+                    if(world[i][j] == 1){
+                        output += "<div class='coin'></div>";
+                    }
+                    if(world[i][j] == 0){
+                        output += "<div class='empty'></div>";
+                    }
+                }
+                output += "</div>";
+
+            }
+            // console.log(output);
+            document.getElementById('world').innerHTML = output;
+        }
+        display_world();
+    </script>
+
+
+
+</body>
+</html>
