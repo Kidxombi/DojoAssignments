@@ -1,0 +1,28 @@
+.container {
+    margin-top: 10%;
+    box-shadow: inset 0 0 45px black;
+    background: linear-gradient(to top right, white, beige, beige, white);
+    padding: 20px;
+    width: 700px;
+}
+.row {
+    margin-top: 25px;
+    width: 100%;
+}
+span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+label {
+    text-align: right;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+h6 {
+    font-weight: bold;
+}
+.res-head {
+    border-bottom: 2px groove black;
+}

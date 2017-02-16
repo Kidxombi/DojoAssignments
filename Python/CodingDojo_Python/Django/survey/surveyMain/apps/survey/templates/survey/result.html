@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Result Page</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'survey/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'survey/css/skeleton.css' %}">
+        <link rel="stylesheet" href="{% static 'survey/css/style.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row u-pull-right box1">
+                <p>Thanks for submitting this form! You have submitted this form <span>{{request.session.count}}</span> times now!</p>
+            </div>
+            <div class="row u-pull-right box2">
+                <h2 class="res-head">Submitted Information</h2>
+                <div class="row">
+                    <h6 class="six columns">Name : </h6>
+                    <p class="six columns">{{request.session.name}}</p>
+                </div>
+                <div class="row">
+                    <h6 class="six columns">Dojo Location : </h6>
+                    <p class="six columns">{{request.session.location}}</p>
+                </div>
+                <div class="row">
+                    <h6 class="six columns">Favorite Language : </h6>
+                    <p class="six columns">{{request.session.lang}}</p>
+                </div>
+                <div class="row">
+                    <h6 class="six columns">Comments : </h6>
+                    <p class="six columns">{{request.session.comments}}</p>
+                </div>
+                <button class="button-primary u-pull-right"><a href="/">Go Back</a></button>
+
+            </div>
+        </div>
+    </body>
+</html>

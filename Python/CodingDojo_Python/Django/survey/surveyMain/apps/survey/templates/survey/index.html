@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Survey Page</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'survey/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'survey/css/skeleton.css' %}">
+        <link rel="stylesheet" href="{% static 'survey/css/style.css' %}">
+    </head>
+    <body>
+        <form class="container" action="/process" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <label for="name" class="six columns">Your Name</label>
+                <input type="text" class="six columns" name="name" id="name">
+            </div>
+
+            <div class="row">
+                <label for="location" class="six columns">Dojo Location</label>
+                <select class="six columns" name="location" id="location">
+                    <option value="San Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option>
+                </select>
+            </div>
+                <div class="row">
+                    <label for="lang" class="six columns">Favorite Language</label>
+                    <select class="six columns" name="lang" id="lang">
+                        <option value="Python">Python</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Ruby">Ruby</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label class="six columns" for="comments">Comments</label>
+                    <textarea class="six columns" name="comments" rows="10" cols="80" id="comments"></textarea>
+            </div>
+            <input type="submit" name="submit" value="SUBMIT" class="u-pull-right button-primary">
+        </form>
+    </body>
+</html>
