@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect
 
+
 def index(request):
     return render(request, 'vinmyMVC/index.html')
+
 
 def show(request):
     print request.method
     return render(request, 'vinmyMVC/show_users.html')
+
 
 def create(request):
     if request.method == "POST":
