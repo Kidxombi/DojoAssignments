@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Time Display</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'timedisplay/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'timedisplay/css/skeleton.css' %}">
+        <link rel="stylesheet" href="{% static 'timedisplay/css/style.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="box1 six columns offset-by-three">
+                    <h3>The current time and date.</h3>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="box2 eight columns offset-by-two">
+                        <h3>The current date is {{date}}</h3>
+                        <h3>The current time is {{time}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
