@@ -3,10 +3,24 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'vinmyMVC/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'vinmyMVC/css/skeleton.css' %}">
+        <link rel="stylesheet" href="{% static 'vinmyMVC/css/style.css' %}">
     </head>
     <body>
-        <h1>Index Html Yay!</h1>
-        {% load staticfiles %}
-        <link rel="stylesheet" href="{% static 'vinmyMVC/css/style.css' %}">
+
+        <form class="container" action="/new_user" method="POST">
+            {% csrf_token %}
+            <h1>{{ request.session.name }}</h1>
+            <div class="row">
+                <label class="six columns" for="first_name">Enter your first name</label>
+            </div>
+            <div class="row">
+                <input class="six columns" type="text" name="first_name" id="first_name">
+                <input class="six columns button-primary" type="submit" value="submit">
+            </div>
+        </form>
+
     </body>
 </html>
