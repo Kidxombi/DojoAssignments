@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Courses</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'courses/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'courses/css/skeleton.css' %}">
+        <link rel="stylesheet" href="{% static 'courses/css/style.css' %}">
+    </head>
+    <body>
+        <form class="container" action="/process" method="POST">
+            {% csrf_token %}
+            <h1>Add a new course</h1>
+
+            <div class="row">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+            </div>
+
+            <div class="row">
+                <label for="desc">Description:</label>
+                <textarea name="desc" id="desc" rows="8" cols="40"></textarea>
+            </div>
+            <div class="row">
+                <input class="button-primary" type="submit" name="submit" value="Add">
+                <input type="submit" name="submit" value="REMOVE ALL" class="danger">
+            </div>
+        </form>
+        <div class="scroll">
+            <table>
+                <thead>
+                    <th>Course Name</th>
+                    <th>Description</th>
+                    <th>Date Added</th>
+                    <th>Actions</th>
+                </thead>
+                <tbody>
+                    {% for course in courses %}
+                        <tr>
+                            <td>{{course.name}}</td>
+                            <td>{{course.description}}</td>
+                            <td>{{course.created_at}}</td>
+                            <td><a href="/remove/{{course.id}}"><button class='button danger' type="button" name="button" value="Remove">Remove</button></a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>
