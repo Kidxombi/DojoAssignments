@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Courses
+from .models import Courses, Descriptions
 
 def index(request):
     print request.POST
