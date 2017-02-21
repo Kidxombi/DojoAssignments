@@ -1,4 +1,4 @@
-"""LoginReg URL Configuration
+"""int_proj URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -14,12 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-
+from django.contrib import admin
 
 urlpatterns = [
-    url(r'^', include('apps.loginReg.urls', namespace='login')),
-    url(r'^time-display/', include('apps.timedisplay.urls', namespace='time-display')),
-    url(r'^random-word/', include('apps.randomWord.urls', namespace='random-word')),
-    url(r'^ninja-gold/', include('apps.ninja_gold.urls', namespace='ninja-gold')),
-    url(r'^dis-ninja/', include('apps.dis_ninja.urls', namespace='dis-ninja')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^', include('apps.loginReg.urls', namespace='users')),
+    url(r'^courses/', include('apps.courses.urls', namespace='courses'))
 ]

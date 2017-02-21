@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Random Word Generator</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'randomWord/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'randomWord/css/skeleton.css' %}">
+        <link rel="stylesheet" href="{% static 'randomWord/css/style.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{request.session.count}}</h1>
+            <div class="row">
+                <h3 class="twelve columns">Generate a random 14 character (kinda)word!</h3>
+                <div class="res-box twelve columns"><h1>{{request.session.ranword}}</h1></div>
+            </div>
+            <form class="row" action="/random-word/logic" method="GET">
+                <input type="submit" name="submit" value="Get Word!" class="button-primary six columns">
+                <input type="submit" name="submit" value="RESET" class="six columns">
+            </form>
+        </div>
+    </body>
+</html>
