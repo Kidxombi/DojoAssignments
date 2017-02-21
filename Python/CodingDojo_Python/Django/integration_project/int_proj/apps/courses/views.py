@@ -12,10 +12,10 @@ def process(request):
 
         if request.POST['submit'] == 'Add':
             Courses.objects.create(name=request.POST['name'], description=request.POST['desc'])
-            return redirect('/')
+            return redirect('/courses/')
         elif request.POST['submit'] == 'REMOVE ALL':
             Courses.objects.all().delete()
-            return redirect('/courses')
+            return redirect('/courses/')
 
 
 
