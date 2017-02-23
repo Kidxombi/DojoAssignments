@@ -8,14 +8,6 @@
         <link rel="stylesheet" href="{% static 'loginReg/css/style.css' %}">
     </head>
     <body>
-        {% if messages %}
-            <ul>
-                {% for message in messages %}
-                    <li class="{{ message.tags }}">{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-        <h1>Success!</h1>
-        <a href="/"><button type="button" name="button">Go Back</button></a>
+    
     </body>
 </html>

@@ -25,8 +25,8 @@ def remove(request, id):
             Courses.objects.filter(id=id).delete()
             return redirect('/')
         elif request.POST['submit'] == 'NO':
-            return redirect('/')
+            return redirect('/courses/')
     else:
         course = Courses.objects.get(id=id)
         context = {'course': course}
-        return render(request, 'courses/remove.html', context)
+        return render(request, '/courses/remove.html', context)

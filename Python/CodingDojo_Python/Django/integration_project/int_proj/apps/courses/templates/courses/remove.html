@@ -18,7 +18,7 @@
                 <h2 class="three columns">Description:</h2>
                 <h3 class="five columns">{{course.description}}</h3>
             </div>
-            <form class="row" action="/remove/{{course.id}}" method="POST">
+            <form class="row" action="/courses/remove/{{course.id}}" method="POST">
                 {% csrf_token %}
                 <input type="submit" name="submit" value="YES">
                 <input type="submit" name="submit" value="NO">

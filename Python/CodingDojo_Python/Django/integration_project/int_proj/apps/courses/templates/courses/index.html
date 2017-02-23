@@ -41,12 +41,13 @@
                             <td>{{course.name}}</td>
                             <td>{{course.description}}</td>
                             <td>{{course.created_at}}</td>
-                            <td><a href="/remove/{{course.id}}"><button class='button danger' type="button" name="button" value="Remove">Remove</button></a></td>
+                            <td><a href="/courses/remove/{{course.id}}"><button class='button danger' type="button" name="button" value="Remove">Remove</button></a></td>
                         </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
+        <a href="/"><button type="button" name="button">Back to Login</button></a>
 
     </body>
 </html>

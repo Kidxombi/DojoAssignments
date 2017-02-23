@@ -5,6 +5,7 @@ from django.core.urlresolvers import reverse
 
 
 
+
 def index(request):
     users = User.objects.all()
     context = {
@@ -12,29 +13,52 @@ def index(request):
     }
     return render(request, 'loginReg/index.html', context)
 
-def success(request):
-    return render(request, 'loginReg/success.html')
+def success(request, id):
+    context = {
+        'user': User.objects.filter(id=id)[0]
+    }
+    return render(request, 'loginReg/success.html', context)
 
 def register(request):
+    errors = {
+        'first':'Invalid First Name:(must be more then two characters and can only contain letters.)',
+        'last':'Invalid Last Name:(must be more then two characters and can only contain letters.)',
+        'email':'Invalid Email',
+        'pwlen':'Invalid Password:(Must contain at least eight characters.)',
+        'pwmatch':'Passwords Do Not Match!',
+    }
     if request.method == 'POST':
-        user_check = User.objects.register(request.POST['first_name'], request.POST['last_name'], request.POST['email'], request.POST['password'], request.POST['password_confirm'])
+        r = User.objects.register(request.POST)
 
-        if user_check == False:
-            messages.error(request, 'Invalid Input')
+        if r[0] == False:
+            for i in r[1]:
+                messages.error(request, errors[i])
             return redirect('/')
         else:
-            messages.success(request, 'Success! Thanks for registering!')
-            return redirect('/success')
+            messages.success(request, 'Thanks for registering!')
+            request.session['current_user'] = r[1]
+            return redirect('/success/{}'.format(r[1]))
     else:
         User.objects.all().delete()
         return redirect('/')
 
 def login(request):
-    login_check = User.objects.login(request.POST['lemail'], request.POST['lpassword'])
-    if login_check == False:
-        messages.error(request, 'Login Failed')
+    errors = {
+        'no-email':'No Matching Email',
+        'wrong-pw':'Invalid Password'
+    }
+    if request.POST['submit'] == 'Login':
+        l = User.objects.login(request.POST)
+        if l[0] == False:
+            for i in l[1]:
+                messages.error(request, error[i])
+            return redirect('/')
+        else:
+            messages.success(request, 'Success! Thanks for loging in!')
+            request.session['current_user'] = l[1]
+            return redirect('/success/{}'.format(l[1]))
+
+    elif request.POST['submit'] == 'Logout':
+        request.session.clear()
+        messages.success(request, 'Successfully logged out')
         return redirect('/')
-    else:
-        messages.success(request, 'Success! Thanks for loging in!')
-        request.session['current_user'] = login_check['True']
-        return redirect('/success')
