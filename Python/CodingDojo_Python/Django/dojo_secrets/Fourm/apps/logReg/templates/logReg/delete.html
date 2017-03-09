@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Delete User</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'logReg/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'logReg/css/skeleton.css' %}">
+        <link rel="stylesheet" href="{% static 'logReg/css/profile-style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Are you sure you want to delete your account? This can not be undone.</h1>
+        <ul>
+            <li>First Name : {{ user.first_name }}</li>
+            <li>Last Name : {{ user.last_name }}</li>
+            <li>Email : {{ user.email }}</li>
+            <li>Member Since : {{ user.created_at }}</li>
+        </ul>
+        <form class="yes/no" action="/delete/{{user.id}}" method="POST">
+            {% csrf_token %}
+            <input type="submit" name="submit" value="yes" class="button-danger">
+        </form>
+            <a href="/profile"><button type="button" name="button" class="button-primary">no</button></a>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login / Registration</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'logReg/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'logReg/css/skeleton.css' %}">
+        <link rel="stylesheet" href="{% static 'logReg/css/style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        {% if 'current_user_id' in request.session %}
+        <h3 class="u-pull-right">online</h3>
+        <div class="logged-in u-pull-right"></div>
+        <a href="/login"><button type="button" name="button" class="button-primary u-pull-right" >Log Out</button></a>
+        <a href="/profile"><button type="button" name="button" class="button-primary u-pull-right" >Profile</button></a>
+
+        {% endif %}
+        <h2>All Users</h2>
+        <hr>
+        <form class="container reg" action="/register" method="POST">
+             {% csrf_token %}
+            <div class="row">
+                <label class="four columns" for="first_name">First Name</label>
+                <input class="four columns inp" type="text" name="first_name" id="first_name">
+            </div>
+            <div class="row">
+                <label class="four columns" for="last_name">Last Name</label>
+                <input class="four columns inp" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="row">
+                <label class="four columns" for="email">Email</label>
+                <input class="four columns inp" type="text" name="email" id="email">
+            </div>
+            <div class="row">
+                <label class="four columns" for="password">Password</label>
+                <input class="four columns inp" type="password" name="password" id="password">
+            </div>
+            <div class="row">
+                <label class="four columns" for="confirm_password">Confirm</label>
+                <input class="four columns inp" type="password" name="confirm_password" id="confirm_password">
+            </div>
+                <input class="three columns offset-by-five button-primary" type="submit" name="submit" value="register">
+        </form>
+        <form class="container log" action="/login" method="POST">
+             {% csrf_token %}
+            <div class="row">
+                <label class="four columns" for="log-email">Email</label>
+                <input class="four columns inp" type="text" name="log-email" id="log-email">
+            </div>
+
+            <div class="row">
+                <label class="four columns" for="log-password">Password</label>
+                <input class="four columns inp" type="password" name="log-password" id="log-password">
+            </div>
+            <input class="three columns offset-by-five button-primary" type="submit" name="submit" value="login">
+        </form>
+        <div class="flash-box">
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li class="{{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </body>
+</html>

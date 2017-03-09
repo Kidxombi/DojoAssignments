@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index</title>
+        {% load staticfiles %}
+
+        <link rel="stylesheet" href="{% static 'dashboard/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'dashboard/css/skeleton.css' %}">
+        <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    </head>
+    <body>
+        <header class="row">
+            <h4><a href="#">Test App</a></h4>
+            {% if 'user_id' not in request.session %}
+            <div class="not_logged_in">
+                <a href="#">Home</a>
+                <div class="head_box1">
+                    <a href="#" class="">Sign In</a>
+                </div>
+            </div>
+            {% endif %}
+        </header>
+        <div class="container jumbo">
+            <h1>Welcome to the Test.</h1>
+            <h3>We are going to be building a cool application using a MVC framework!</h3>
+            <a href="#"><button type="button" name="button" class="button button-primary">Start</button></a>
+        </div>
+        <div class="container index_info">
+            <div class="row">
+                <div class="four columns">
+                    <h2>Manage Users</h2>
+                    <h4>Using this application, you'll learn how to add, remove, and edit users for this application.</h4>
+                </div>
+                <div class="four columns">
+                    <h2>Leave Messages</h2>
+                    <h4>Users will be able to leave messages for other users using this application.</h4>
+                </div>
+                <div class="four columns">
+                    <h2>Edit User Information</h2>
+                    <h4>Admins will be able to edit another users information. (email address, first name, last name, etc)</h4>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+header {
+  height: 50px;
+  border-bottom: 1px groove darkgrey; }
+  header * {
+    display: inline-block; }
+  header a {
+    color: black;
+    text-decoration: none; }
+  header h4 {
+    width: 20%;
+    text-align: right;
+    border-right: 1px ridge darkgrey; }
+
+.jumbo {
+  background: linear-gradient(to bottom left, silver, lightgrey, grey);
+  border: 10px solid darkgrey;
+  height: 350px;
+  margin-top: 25px;
+  padding: 10px; }
+  .jumbo .button {
+    box-shadow: 5px 5px 20px black; }
+  .jumbo h1 {
+    color: darkblue; }
+
+.index_info {
+  margin-top: 20px; }
+  .index_info h2 {
+    color: blue; }
+
+/*# sourceMappingURL=style.css.map */
