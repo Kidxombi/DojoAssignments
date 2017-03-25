@@ -86,55 +86,56 @@ class ViewController: UIViewController {
         redScore.removeAll()
         blueScore.removeAll()
     }
-    func checkWin() -> Bool{
+    func checkWin(){
         
         if redScore.contains(1) && redScore.contains(2) && redScore.contains(3) || blueScore.contains(1) && blueScore.contains(2) && blueScore.contains(3){
             winLabel.text = "\(whoTurn) Wins!!!"
             reset()
-            return true
+
         }
         
         else if redScore.contains(4) && redScore.contains(5) && redScore.contains(6) || blueScore.contains(4) && blueScore.contains(5) && blueScore.contains(6){
             winLabel.text = "\(whoTurn) Wins!!!"
             reset()
-            return true
+  
         }
         
         else if redScore.contains(7) && redScore.contains(8) && redScore.contains(9) || blueScore.contains(7) && blueScore.contains(8) && blueScore.contains(9){
             winLabel.text = "\(whoTurn) Wins!!!"
             reset()
-            return true
+         
         }
         
-        if redScore.contains(1) && redScore.contains(4) && redScore.contains(7) || blueScore.contains(1) && blueScore.contains(4) && blueScore.contains(7){
+        else if redScore.contains(1) && redScore.contains(4) && redScore.contains(7) || blueScore.contains(1) && blueScore.contains(4) && blueScore.contains(7){
             winLabel.text = "\(whoTurn) Wins!!!"
             reset()
-            return true
+        
         }
         
-        if redScore.contains(2) && redScore.contains(5) && redScore.contains(8) || blueScore.contains(2) && blueScore.contains(5) && blueScore.contains(8){
+        else if redScore.contains(2) && redScore.contains(5) && redScore.contains(8) || blueScore.contains(2) && blueScore.contains(5) && blueScore.contains(8){
             winLabel.text = "\(whoTurn) Wins!!!"
             reset()
-            return true
+            
         }
         
-        if redScore.contains(3) && redScore.contains(6) && redScore.contains(9) || blueScore.contains(3) && blueScore.contains(6) && blueScore.contains(9){
+        else if redScore.contains(3) && redScore.contains(6) && redScore.contains(9) || blueScore.contains(3) && blueScore.contains(6) && blueScore.contains(9){
             winLabel.text = "\(whoTurn) Wins!!!"
             reset()
-            return true
+         
         }
         
-        if redScore.contains(1) && redScore.contains(5) && redScore.contains(9) || blueScore.contains(1) && blueScore.contains(5) && blueScore.contains(9){
+        else if redScore.contains(1) && redScore.contains(5) && redScore.contains(9) || blueScore.contains(1) && blueScore.contains(5) && blueScore.contains(9){
             winLabel.text = "\(whoTurn) Wins!!!"
             reset()
-            return true
+       
         }
         
-        if redScore.contains(3) && redScore.contains(5) && redScore.contains(7) || blueScore.contains(3) && blueScore.contains(5) && blueScore.contains(7){
+        else if redScore.contains(3) && redScore.contains(5) && redScore.contains(7) || blueScore.contains(3) && blueScore.contains(5) && blueScore.contains(7){
             winLabel.text = "\(whoTurn) Wins!!!"
             reset()
-            return true
+          
         }
+       
         
         
     }
