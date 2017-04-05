@@ -35,6 +35,7 @@ class Deck {
             }
         }
     }
+    
     func shuffle(){
         for i in stride(from: self.cards.count-1, to: 0, by: -1){
             let swapCardIndex = Int(arc4random_uniform(UInt32(i)))
@@ -43,6 +44,7 @@ class Deck {
             self.cards[swapCardIndex] = temp
         }
     }
+    
     func show(){
         for card in self.cards {
             card.show()

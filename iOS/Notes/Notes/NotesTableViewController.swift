@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import Foundation
 
-class NotesTableViewController: UITableViewController, TheDelegate {
+class NotesTableViewController: UITableViewController, TheDelegate, UISearchBarDelegate {
 
     
    
@@ -26,9 +26,18 @@ class NotesTableViewController: UITableViewController, TheDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAllItems()
+        createSearchBar()
     }
     
-
+    func createSearchBar(){
+        
+        let searchBar = UISearchBar()
+        searchBar.placeholder = "Search"
+        searchBar.delegate = self
+        
+        self.navigationItem.titleView = searchBar
+        
+    }
     
     
     
