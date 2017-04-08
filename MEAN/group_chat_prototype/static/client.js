@@ -15,7 +15,5 @@ socket.on('user_disconnected', function(data){
 
 socket.emit('new_user', {name:name})
 socket.on('user_joined', function(data){
-    console.log(data.message);
-    console.log(data);
     $('#the_users').append("<div value="+data.user.id+">"+data.user.name+"</div>")
 })
