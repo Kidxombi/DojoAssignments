@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index EJS</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/style1.css">
+    </head>
+    <body>
+         <div class="wrapper">
+             <form class="theForm" action="/results" method="post">
+
+                 <label for="name">Your Name: </label><input type="text" name="name" id="name">
+
+                 <label for="location">Dojo Location: </label><select name="location" id="location">
+                     <option value="san_jose">San Jose</option>
+                     <option value="seattle">Seattle</option>
+                     <option value="dallas">Dallas</option>
+                 </select>
+
+                 <label for="lang">Favorite Language: </label><select name="lang" id="lang">
+                     <option value="python">Python</option>
+                     <option value="javascript">JavaScript</option>
+                     <option value="swift">Swift</option>
+                 </select>
+
+                 <label for="comments">Comments (optional):</label>
+
+                 <textarea name="comments" rows="8" cols="40"></textarea>
+
+                 <input type="submit" name="submit" value="submit">
+                 
+             </form>
+         </div>
+    </body>
+</html>

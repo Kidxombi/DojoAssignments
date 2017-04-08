@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Survey Form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="skeleton.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var socket = io.connect();
+                // socket logic here
+                $('button').click(function(){
+                    var x = {
+                        name:$('#name').val(),
+                        quest:$('#quest').val(),
+                        food:$('#food').val(),
+                        power:$('#power').val(),
+                        comments:$('#comments').val()
+                    }
+                    socket.emit('button_pressed', {'clientObject':x})
+                })
+                socket.on('server_response', function(data){
+                    var y = {
+                        name:data.server_response.name,
+                        quest:data.server_response.quest,
+                        food:data.server_response.food,
+                        power:data.server_response.power,
+                        comments:data.server_response.comments
+                    }
+                    $('body').prepend("<div class='results container'><p>Your name is: "+y.name+"</p><p>Your quest is: "+y.quest+"</p><p>Your favorite food is: "+y.food+"</p><p>Your prefered super-power is: "+y.power+"</p><p>Coments: "+y.comments+"</p></div>")
+                })
+
+
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <label for="name">What is your name?</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="row">
+                <label for="quest">What is your quest?</label>
+                <input type="text" name="quest" id="quest">
+            </div>
+            <div class="row">
+                <label for="food">What is your favorite food?</label>
+                <select name="food" id="food">
+                    <option value="sushi">Sushi</option>
+                    <option value="burgers">Burgers</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="anchovies">Anchovies</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="power">If you could have any super-power, what would you choose?</label>
+                <select name="power" id="power">
+                    <option value="flight">Flight</option>
+                    <option value="invisibility">Invisibility</option>
+                    <option value="strength">Super Strength</option>
+                    <option value="speed">Super Speed</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="comments">Any additional comments?</label>
+                <textarea name="comments" id="comments" rows="5" cols="40"></textarea>
+            </div>
+            <button type="button" name="submitButton">Submit</button>
+        </div>
+    </body>
+</html>

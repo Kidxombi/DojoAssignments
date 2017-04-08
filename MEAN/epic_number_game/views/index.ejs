@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Epic Number Game</title>
+        <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="skeleton.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="main.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>The button has been pushed <span id="count"><%= count %></span> time(s)</h1>
+            <h4>Push the button to update the count!</h4>
+            <button class="epicButton" id="epicButton" type="button" name="epicButton">Push the epic button</button>
+            <button class="resetButton" id="resetButton" type="button" name="resetButton">Reset count</button>
+        </div>
+    </body>
+</html>

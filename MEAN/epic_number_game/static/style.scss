@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.epicButton {
+    border-radius: 10%;
+    color: blue;
+    background-color: white;
+    &:hover {
+        color: white;
+        background-color: blue;
+    }
+}
+.resetButton {
+    color: red;
+    background-color: white;
+    &:hover {
+        color: white;
+        background-color: red;
+    }
+}
+.container {
+    height: 75%;
+    margin-top: 50px;
+    border: 1px dotted red; // testing
+    padding: 10px;
+    text-align: center;
+    * {
+        margin-top: 50px;
+    }
+}
