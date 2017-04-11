@@ -1,0 +1,44 @@
+.container {
+    margin-top: 10%;
+    text-align: center;
+    textarea {
+        resize: none;
+    }
+    ul {
+        list-style-type: none;
+        border: 4px ridge teal;
+        padding: 10px;
+        li {
+            text-align: left;
+            padding: 20px;
+            border-bottom: 2px ridge gray;
+            border-left: 2px groove darkgray;
+            .deleteBtn {
+                color: white;
+                background:red;
+                &:hover {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+    }
+    .add {
+        color: green;
+        background-color: white;
+        &:hover {
+            box-shadow: 5px 5px 20px black;
+            color: white;
+            background-color: green;
+        }
+    }
+    .skip {
+        color: red;
+        background-color: white;
+        &:hover {
+            box-shadow: 5px 5px 20px black;
+            color: white;
+            background-color: red;
+        }
+    }
+}

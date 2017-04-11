@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="skeleton.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="client.js" defer></script>
+    </head>
+    <body>
+
+            <form class="container" action="/create" method="post">
+                <h1>Welcome to QuotingDojo</h1>
+                <div class="row">
+                    <label for="poster">Your name</label>
+                    <input type="text" name="poster" id="poster">
+                </div>
+
+                <div class="row">
+                    <label for="content">Your quote</label>
+                    <textarea name="content" id="content" rows="10" cols="40"></textarea>
+                </div>
+
+                <div class="row">
+                    <input type="submit" name="submit" value="Add" class="add">
+                    <input type="submit" name="submit" value="Skip" class="skip">
+                </div>
+
+            </form>
+
+
+    </body>
+</html>

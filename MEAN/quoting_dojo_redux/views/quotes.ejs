@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Quotes</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="skeleton.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="client.js" defer></script>
+    </head>
+    <body>
+        <a href="/"><button type="button" name="homeBtn">Home</button></a>
+        <div class="container">
+            <h1>Here are the awesome quotes</h1>
+            <% if (quotes){ %>
+                <ul>
+                    <% for(i in quotes){ %>
+                        <li>"<%=quotes[i].content%>" <%=quotes[i].createdAt%> <a href="/quotes/<%=quotes[i]._id %>/destroy"><button type="button" name="button" class="deleteBtn u-pull-right">Delete</button></a></li>
+
+                    <% } %>
+                </ul>
+            <% } %>
+        </div>
+    </body>
+</html>
