@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Wall</title>
+        <link rel="stylesheet" href="/stylesheets/normalize.css">
+        <link rel="stylesheet" href="/stylesheets/skeleton.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                $('#showCommentForm').click(function(){
+                    $('#commentForm').toggle()
+                })
+
+                $('#showCommentList').click(function(){
+                    $('#commentList').toggle()
+                })
+
+
+
+
+            })
+
+        </script>
+    </head>
+    <body>
+        <div class="container wallWrapper">
+            <h1>The Wall</h1>
+            <form class="postForm" action="/posts/create" method="post">
+
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+
+                <label for="message">Message:</label>
+                <textarea name="message" rows="10" cols="80"></textarea>
+
+                <div class="row">
+                    <input class="btn" type="submit" name="submit" value="Post Message" class="u-pull-right">
+
+                </div>
+            </form>
+
+
+            <% if (posts) { %>
+                <% for (i in posts) { %>
+                    <div class="post u-pull-right">
+                        <span class="highlight">Name:</span>
+                        <p><%= posts[i].name %></p>
+                        <span class="highlight">Message:</span>
+                        <p><%= posts[i].content %></p>
+                        <div class="row">
+                            <form action="/posts/<%= posts[i]._id %>/destroy" method="post">
+                                <input class="deleteBtn" type="submit" name="submit" value="delete">
+                            </form>
+                            <button type="button" name="button" id="showCommentList"></button>
+                            <div id="commentList" class="commentList">
+                                <% for (j in posts[i].comments) { %>
+                                    <span class="highlight">Name:</span>
+                                    <p><%= posts[i].comments[j].name %></p>
+                                    <span class="highlight">Comment:</span>
+                                    <p><%= posts[i].comments[j].comment %></p>
+                                <% } %>
+                                <button type="button" name="button" id="showCommentForm">Make A Comment</button>
+                            </div>
+
+
+                            <form id="commentForm" class="commentForm" action="/posts/<%= posts[i]._id %>" method="post">
+
+                                <label for="name">Name:</label>
+                                <input type="text" name="name" id="name">
+
+                                <label for="comment">Comment:</label>
+                                <textarea name="comment" rows="10" cols="50"></textarea>
+
+                                <input type="submit" name="submit" value="Post Comment">
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
+    </body>
+</html>

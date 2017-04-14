@@ -1,0 +1,18 @@
+.wrapper {
+    box-shadow: inset 0 0 20px lightgray;
+    padding: 25px;
+    margin-top: 25px;
+    table {
+        th {
+            text-align: center;
+        }
+        width: 100%;
+        td {
+            button {
+                width: 100%;
+            }
+            text-align: center;
+            border: 2px groove black;
+        }
+    }
+}

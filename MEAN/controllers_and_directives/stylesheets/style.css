@@ -1,0 +1,28 @@
+.mainBox {
+  background: linear-gradient(to bottom left, white, white, beige);
+  box-shadow: inset 0 0 30px lightgray;
+  padding: 60px;
+  width: 80%;
+  margin: auto;
+  margin-top: 15px; }
+  .mainBox .foodDisplay {
+    padding: 10px;
+    display: inline-block;
+    width: 400px;
+    height: 600px;
+    box-shadow: inset 0 0 30px lightgray;
+    width: 320px; }
+    .mainBox .foodDisplay ul {
+      list-style-type: none; }
+  .mainBox button, .mainBox input {
+    box-shadow: 5px 5px 15px lightgray; }
+    .mainBox button:hover, .mainBox input:hover {
+      box-shadow: inset 0 0 30px lightgray; }
+  .mainBox .row {
+    margin-bottom: 15px; }
+  .mainBox p {
+    display: inline-block; }
+  .mainBox span {
+    color: red; }
+
+/*# sourceMappingURL=style.css.map */

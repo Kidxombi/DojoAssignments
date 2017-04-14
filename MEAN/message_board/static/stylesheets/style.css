@@ -1,0 +1,46 @@
+html, body {
+  height: 500%; }
+
+.wallWrapper {
+  height: 100%;
+  box-shadow: inset 0 0 20px lightgray;
+  margin-top: 20px;
+  padding: 15px; }
+  .wallWrapper h1 {
+    text-align: center;
+    border-bottom: 2px double black; }
+  .wallWrapper .postForm {
+    width: 650px;
+    box-shadow: 5px 5px 10px lightgray;
+    padding: 8px; }
+    .wallWrapper .postForm textarea {
+      box-shadow: inset 0 0 15px lightgray;
+      resize: none; }
+    .wallWrapper .postForm input {
+      box-shadow: inset 0 0 15px lightgray; }
+    .wallWrapper .postForm .btn {
+      box-shadow: 0px 3px 5px gray; }
+      .wallWrapper .postForm .btn:hover {
+        box-shadow: inset 0 0 10px lightgray; }
+  .wallWrapper .commentForm {
+    padding: 10px;
+    box-shadow: inset 0 0 30px lightgray; }
+  .wallWrapper .post {
+    width: 50%;
+    margin-bottom: 10px;
+    text-align: right;
+    padding: 8px;
+    box-shadow: 5px 5px 10px lightgray; }
+    .wallWrapper .post .highlight {
+      color: red; }
+    .wallWrapper .post .deleteBtn {
+      border-radius: 50%;
+      box-shadow: 0px 3px 5px gray;
+      color: red; }
+      .wallWrapper .post .deleteBtn:hover {
+        box-shadow: inset 0 0 10px lightgray; }
+  .wallWrapper .commentList {
+    height: 400px;
+    overflow-y: scroll; }
+
+/*# sourceMappingURL=style.css.map */

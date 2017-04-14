@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Color Filter</title>
+        <script src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="stylesheets/normalize.css">
+        <link rel="stylesheet" href="stylesheets/skeleton.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+    <body ng-controller="controller_1 as c1">
+        <table class="container">
+            <thead>
+                <th>Name <input type="text" ng-model="_filter"></th>
+                <th>HEX</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="color in c1.colors | filter:_filter track by $index">
+                    <td class="name" style="box-shadow:inset 0 0 15px {{color.hex}};" ng-bind="color.name"></td>
+                    <td class="hex" style="background-color:{{color.hex}}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

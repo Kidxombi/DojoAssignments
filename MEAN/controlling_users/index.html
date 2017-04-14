@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Controlling Users</title>
+        <script src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="stylesheets/normalize.css">
+        <link rel="stylesheet" href="stylesheets/skeleton.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+    <body ng-controller="theController as c">
+        <div class="container wrapper">
+            <form>
+                <div class="row">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" ng-model="c.newUser.firstName">
+                </div>
+                <div class="row">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" ng-model="c.newUser.lastName">
+                </div>
+                <div class="row">
+                    <label for="favLang">Favorite Language</label>
+                    <input type="text" id="favLang" ng-model="c.newUser.favLang">
+                    <input value="Create?" type="submit" ng-click="c.addUser()">
+                </div>
+            </form>
+            <div class="row">
+                <table>
+                    <thead>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Fav Language</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody>
+                        <input type="text" ng-model="_filter"  placeholder="Find User...">
+                        <tr ng-repeat="user in c.users | filter:_filter track by $index">
+                            <td ng-bind="user.firstName"></td>
+                            <td ng-bind="user.lastName"></td>
+                            <td ng-bind="user.favLang"></td>
+                            <td><button type="button" ng-click="c.removeUser(user)">Delete?</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

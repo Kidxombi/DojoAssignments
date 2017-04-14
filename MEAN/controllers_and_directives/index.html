@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Controllers and Directives</title>
+        <script src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="stylesheets/normalize.css">
+        <link rel="stylesheet" href="stylesheets/skeleton.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+    <body ng-app="app">
+        <div class="mainBox" ng-controller="theController as c">
+            <div class="row">
+                <form>
+                    <label class="three columns" for="newFood">Favorite Food</label>
+                    <input class="three columns" type="text" id="newFood" ng-model="c.newFood">
+                    <input class="three columns" type="submit" ng-click="c.addFood()" value="Add Food">
+                </form>
+
+                <input class="three columns" type="text" placeholder="filter..." ng-model="theFilter">
+            </div>
+            <div class="row">
+                <p>Currently typing: <span ng-bind="c.newFood"></span></p>
+                <div class="foodDisplay u-pull-right">
+                    <ul>
+                        <li ng-repeat="f in c.foods | filter:theFilter track by $index"><span ng-bind="f"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="u-pull-right" type="button" ng-click="c.clear()">Clear</button>
+
+        </div>
+    </body>
+</html>

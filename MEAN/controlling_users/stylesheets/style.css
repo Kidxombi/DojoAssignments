@@ -1,0 +1,10 @@
+.wrapper {
+  padding: 20px;
+  border-top: 3px ridge black;
+  border-left: 3px groove black;
+  border-right: 3px groove black; }
+  .wrapper table {
+    margin: auto;
+    width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Projucts with Factory</title>
+        <script src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="stylesheets/normalize.css">
+        <link rel="stylesheet" href="stylesheets/skeleton.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+    <body ng-controller="Controller as c">
+        <div class="container wrapper">
+            <form>
+                <div class="row">
+                    <label for="name">Product Name</label>
+                    <input type="text" id="name" ng-model="c.newProduct.name">
+                </div>
+                <div class="row">
+                    <label for="price">Product Price</label>
+                    <input type="text" id="price" ng-model="c.newProduct.price">
+                    <input type="submit" ng-click="c.create()">
+                </div>
+            </form>
+            <div class="row">
+                <table>
+                    <thead>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="product in c.products track by $index">
+                            <td class="cell" ng-bind="product.name | uppercase"></td>
+                            <td class="cell" ng-bind="product.price | currency:'$'"></td>
+                            <td><button type="button" ng-click="c.delete(product)">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
