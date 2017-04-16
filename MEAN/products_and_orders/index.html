@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Products and Orders</title>
+        <script src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="stylesheets/normalize.css">
+        <link rel="stylesheet" href="stylesheets/skeleton.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+    <body>
+        <div class="products container" ng-controller="productController as pc">
+            <h1>Products Controller</h1>
+
+            <form>
+                <div class="row">
+                    <label for="name">Product Name</label>
+                    <input type="text" id="name" ng-model="pc.newProduct.name">
+                </div>
+                <div class="row">
+                    <label for="price">Product Price</label>
+                    <input type="text" id="price" ng-model="pc.newProduct.price">
+                    <input type="submit" value="Add Product" ng-click="pc.create()">
+                </div>
+            </form>
+            <div class="row">
+                <table>
+                    <thead>
+                        <th ng-click="pc.sortBy='name'">Name</th>
+                        <th ng-click="pc.sortBy='price'">Price</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="product in pc.products | orderBy:pc.sortBy track by $index">
+                            <td ng-bind="product.name | uppercase"></td>
+                            <td ng-bind="product.price | currency:'$'"></td>
+                            <td><button type="button" ng-click="pc.delete(product)">Delete Product</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="orders container" ng-controller="orderController as oc">
+            <h1>Orders Controller</h1>
+            <table>
+                <thead>
+                    <th ng-click="oc.sortBy = 'name'">Name</th>
+                    <th ng-click="oc.sortBy = 'price'">Price</th>
+                    <th>Quantity Available</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="product in oc.products | orderBy:oc.sortBy track by $index">
+                        <td ng-bind="product.name | uppercase"></td>
+                        <td ng-bind="product.price | currency:'$'"></td>
+                        <td ng-bind="product.amount"></td>
+                        <td><button type="button" ng-click="oc.buy(product)">Buy</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>

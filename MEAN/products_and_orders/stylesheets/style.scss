@@ -1,0 +1,27 @@
+.container {
+    border: 3px ridge black;
+    box-shadow: inset 0 0 10px black;
+    padding: 20px;
+    margin-top: 40px;
+    h1 {
+        color: red;
+        text-align: center;
+        margin-top: -40px;
+        background-color: white;
+        width: 27%;
+        font-size: 30px;
+    }
+    table {
+        border: 2px groove gray;
+        width: 100%;
+        th {
+            padding: 10px;
+            border: 1px solid darkgray;
+        }
+        td {
+            padding: 10px;
+            width: 100px;
+            border: 1px solid lightgray;
+        }
+    }
+}
