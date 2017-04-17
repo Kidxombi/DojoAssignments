@@ -1,0 +1,38 @@
+<div class="container wrapper1" ng-controller="view1Controller as c1">
+    <h2>Users Controller</h2>
+    <form>
+        <div class="row">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" ng-model="c1.newUser.fname">
+        </div>
+        <div class="row">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" ng-model="c1.newUser.lname">
+        </div>
+        <div class="row">
+            <label for="lang">Favorite Language</label>
+            <input type="text" id="lang" ng-model="c1.newUser.lang">
+            <input type="submit" value="Create User" ng-click="c1.create()">
+        </div>
+    </form>
+
+    <div class="row">
+        <table>
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Fav Language</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in c1.users track by $index">
+                    <td ng-bind="user.fname"></td>
+                    <td ng-bind="user.lname"></td>
+                    <td ng-bind="user.lang"></td>
+                    <td><button type="button" ng-click="c1.destroy(user)">Delete User</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

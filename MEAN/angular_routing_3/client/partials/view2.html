@@ -1,0 +1,16 @@
+<div class="container wrapper2" ng-controller="view2Controller as c2">
+    <table>
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Fav Language</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in c2.users track by $index">
+                <td ng-bind="user.fname"></td>
+                <td ng-bind="user.lname"></td>
+                <td ng-bind="user.lang"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
