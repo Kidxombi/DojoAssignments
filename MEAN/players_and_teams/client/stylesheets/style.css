@@ -1,0 +1,17 @@
+.wrapper1 .table1 {
+  width: 100%; }
+  .wrapper1 .table1 td {
+    width: 50%; }
+    .wrapper1 .table1 td button {
+      color: red;
+      background-color: white; }
+      .wrapper1 .table1 td button:hover {
+        color: white;
+        background-color: red; }
+
+.wrapper2 table {
+  width: 100%; }
+  .wrapper2 table td {
+    width: 33%; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+<div class="container wrapper1" ng-controller="teamController as tc">
+    <form class="row">
+        <label for="name">Name</label>
+        <input type="text" id="name" ng-model="tc.newteam.name">
+        <input type="submit" class="button-primary" value="Add team">
+    </form>
+
+    <div class="row">
+        <table class="table1">
+            <thead>
+                <th>Name</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="t in tc.teams track by $index">
+                    <td ng-bind="t.name"></td>
+                    <td><button ng-click="tc.destroy(t)" type="button">Remove team</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

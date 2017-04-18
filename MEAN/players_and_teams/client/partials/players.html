@@ -1,0 +1,22 @@
+<div class="container wrapper1" ng-controller="playerController as pc">
+    <form class="row">
+        <label for="name">Name</label>
+        <input type="text" id="name" ng-model="pc.newPlayer.name">
+        <input type="submit" class="button-primary" value="Add player">
+    </form>
+
+    <div class="row">
+        <table class="table1">
+            <thead>
+                <th>Name</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in pc.players track by $index">
+                    <td ng-bind="p.name"></td>
+                    <td><button ng-click="pc.destroy(p)" type="button">Remove Player</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

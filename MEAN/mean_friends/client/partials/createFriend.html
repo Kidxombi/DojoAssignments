@@ -1,0 +1,11 @@
+<div class="container createFriend" ng-controller="friendController as fc">
+    <form ng-submit="fc.create()">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" ng-model="fc.newFriend.firstName">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" ng-model="fc.newFriend.lastName">
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" ng-model="fc.newFriend.birthday">
+        <input type="submit" value="add friend">
+    </form>
+</div>

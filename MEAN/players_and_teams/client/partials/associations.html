@@ -1,0 +1,26 @@
+<div class="container wrapper2" ng-controller="associationController as ac">
+    <div class="row">
+        <form ng-submit="ac.assign()">
+            <select class="four columns" ng-model="ac.player" ng-options="p.name for p in ac.players"></select>
+            <select class="four columns" ng-model="ac.team" ng-options="t.name for t in ac.teams"></select>
+            <input class="four columns" type="submit" value="assign player to team">
+        </form>
+    </div>
+
+    <div class="row">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Team</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in ac.players track by $index">
+                    <td ng-bind="p.name"></td>
+                    <td ng-bind="p.team.name"></td>
+                    <td><button type="button" ng-click="ac.clearAssign(p)">Clear Assignment</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
