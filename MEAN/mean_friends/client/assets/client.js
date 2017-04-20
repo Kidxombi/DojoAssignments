@@ -31,6 +31,11 @@ app.factory('theFactory', function($http){
 
         })
     }
+    facotry.delete = function(friendID){
+        $http.delete('friends/'+friendID).then(function(data){
+            console.log(data.message);
+        })
+    }
 
 
     return factory;
@@ -60,6 +65,9 @@ app.controller('friendController', function(theFactory, $location, $routeParams)
         }
         $location.url('/friends/'+id);
         console.log(this.oneFriend, "one friend");
+    }
+    this.delete = function(friendID){
+        theFactory.delete(friendID);
     }
 
 })

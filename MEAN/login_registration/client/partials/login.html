@@ -1,0 +1,16 @@
+<div class="wrapper regWrapper" ng-controller="loginController as lc">
+    <form class="loginForm">
+
+        <label for="email">E-Mail</label>
+        <input type="text" id="email" ng-model="lc.user.email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" ng-model="lc.user.password">
+
+
+        <input type="submit" value="Login">
+        <a href="#!/reg"><button type="button">Register</button></a>
+
+
+    </form>
+</div>

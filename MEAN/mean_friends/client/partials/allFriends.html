@@ -10,9 +10,9 @@
                 <td ng-bind="f.firstName"></td>
                 <td ng-bind="f.lastName"></td>
                 <td ng-bind="f.birthday"></td>
-                <td><button type="button"ng-click="fc.show(f._id)"></button></td>
-                <td></td>
-                <td></td>
+                <td><button type="button"ng-click="fc.show(f._id)">Show</button></td>
+                <td><button type="button">Edit</button></td>
+                <td><button type="button" ng-click="fc.delete(f._id)">Delete</button></td>
             </tr>
         </tbody>
     </table>

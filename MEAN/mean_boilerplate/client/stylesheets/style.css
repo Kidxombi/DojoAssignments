@@ -1,0 +1,20 @@
+h1 {
+  color: red; }
+
+header ul {
+  list-style-type: none; }
+  header ul li {
+    display: inline-block; }
+
+.wrapper table {
+  width: 100%; }
+  .wrapper table button {
+    width: 50px; }
+  .wrapper table .showBtn {
+    background-color: yellow; }
+  .wrapper table .editBtn {
+    background-color: green; }
+  .wrapper table .deleteBtn {
+    background-color: red; }
+
+/*# sourceMappingURL=style.css.map */

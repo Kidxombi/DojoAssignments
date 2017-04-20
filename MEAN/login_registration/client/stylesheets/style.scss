@@ -1,0 +1,35 @@
+h1 {
+    color: red;
+}
+
+header {
+    ul {
+        list-style-type: none;
+        li {
+            display: inline-block;
+        }
+    }
+}
+.wrapper {
+
+    table {
+        width: 100%;
+        button {
+            width: 50px;
+        }
+        .showBtn {
+            background-color: yellow;
+        }
+        .editBtn {
+            background-color: green;
+        }
+        .deleteBtn {
+            background-color: red;
+        }
+    }
+
+}
+
+.regWrapper {
+    border: 1px dotted red;
+}

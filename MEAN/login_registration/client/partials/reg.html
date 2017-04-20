@@ -1,0 +1,27 @@
+<div class="wrapper regWrapper" ng-controller="newController as nc">
+    <form class="regForm">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" ng-model="nc.newuser.fname">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" ng-model="nc.newuser.lname">
+
+        <label for="bday">Birthday</label>
+        <input type="Date" id="bday" ng-model="nc.newuser.bday">
+
+        <label for="email">E-Mail</label>
+        <input type="text" id="email" ng-model="nc.newuser.email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" ng-model="nc.newuser.password">
+
+        <label for="confirm_password">Password</label>
+        <input type="confirm_password" id="confirm_password" ng-model="nc.confirm_password">
+
+        <input type="submit" value="Register">
+        <a href="#!"><button type="button">Login</button></a>
+
+
+    </form>
+</div>

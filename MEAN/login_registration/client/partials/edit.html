@@ -1,0 +1,11 @@
+<div class="wrapper" ng-controller="editController as ec">
+    <form ng-submit="ec.update()">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" ng-value="ec.user.fname" ng-model="ec.user.fname">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" ng-value="ec.user.lname" ng-model="ec.user.lname">
+        <label for="bday">Birthday</label>
+        <input type="date" id="bday" ng-value="ec.user.bday | date: 'yyyy-MM-dd'" ng-model="ec.user.bday">
+        <input type="submit">
+    </form>
+</div>

@@ -1,0 +1,7 @@
+<div class="wrapper" ng-controller="editController as ec">
+    <ul>
+        <li ng-bind="ec.friend.fname"></li>
+        <li ng-bind="ec.friend.lname"></li>
+        <li ng-bind="ec.friend.bday | date: 'dd / MM / yyyy'"></li>
+    </ul>
+</div>

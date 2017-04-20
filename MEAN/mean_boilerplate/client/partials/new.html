@@ -1,0 +1,12 @@
+
+<div class="wrapper" ng-controller="newController as nc">
+    <form class="newFriendForm" ng-submit="nc.create()">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" ng-model="nc.newFriend.fname">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" ng-model="nc.newFriend.lname">
+        <label for="bday">Birthday</label>
+        <input type="date" id="bday" ng-model="nc.newFriend.bday">
+        <input type="submit">
+    </form>
+</div>

@@ -1,0 +1,21 @@
+
+<div class="wrapper" ng-controller="allController as ac">
+    <table>
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Show</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="friend in ac.friends track by $index">
+                <td ng-bind="friend.fname"></td>
+                <td ng-bind="friend.lname"></td>
+                <td><button class="showBtn" type="button" ng-click="ac.show(friend._id)"></button></td>
+                <td><button class="editBtn" type="button" ng-click="ac.edit(friend._id)"></button></td>
+                <td><button class="deleteBtn" type="button" ng-click="ac.delete(friend._id)"></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
