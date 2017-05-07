@@ -1,0 +1,35 @@
+<div class="container products" ng-controller="productController as pc">
+    <div class="three columns section">
+        <input type="text" placeholder="search...">
+        <button type="button">Filter</button>
+        <h6>Add a new product</h6>
+        <form ng-submit="pc.create()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" ng-model="pc.newProduct.name">
+
+            <label for="image">Image:</label>
+            <input type="text" id="image" placeholder="http://" ng-model="pc.newProduct.image">
+
+            <label for="description">Description:</label>
+            <textarea name="name" rows="6" cols="40" ng-model="pc.newProduct.description"></textarea>
+
+            <label for="quantity">Initial Quantity</label>
+            <select ng-model="pc.n" ng-options="n for n in pc.makeArr(99)"></select>
+            <input type="submit">
+
+
+        </form>
+    </div>
+
+    <div class="nine columns section">
+        <div class="prodBox two columns" ng-repeat="p in pc.products">
+            <p ng-bind="p.name"></p>
+            <p ng-bind="p.quantity"></p>
+            <button type="button" class="delBtn" ng-click="pc.delete(p._id)"></button>
+        </div>
+    </div>
+
+
+
+
+</div>

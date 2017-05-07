@@ -1,0 +1,33 @@
+<div class="container customers" ng-controller="customerController as cc">
+
+    <div class="row">
+    <form ng-submit="cc.create()">
+        <label for="customer_name">Add a new customer</label>
+        <input type="text" id="customer_name" ng-model="cc.newCustomer.name">
+        <input type="submit" value="Add Customer">
+    </form>
+    </div>
+
+    <div class="row">
+        <input type="text" placeholder="search name..." class="u-pull-right" ng-model="search_param">
+        <table>
+            <thead>
+                <th>Customer Name</th>
+                <th>Created at</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="c in cc.customers | filter:search_param">
+                    <td ng-bind="c.name"></td>
+                    <td ng-bind="c.createdAt | date: 'MM/dd/yyyy'"></td>
+                    <td><button type="button" ng-click="cc.delete(c._id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+</div>

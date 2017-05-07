@@ -1,6 +1,7 @@
 var socket  = io.connect();
 var name = prompt("What is your name?");
 var user_info = {};
+
 socket.on('handshake', function(data){
     for (i in data.users) {
         $('.userBox').append("<p class='user'>"+data.users[i].name+"</p>");

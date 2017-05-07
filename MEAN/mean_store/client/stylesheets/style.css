@@ -1,0 +1,44 @@
+html, body {
+  height: 100%; }
+
+header {
+  text-align: center; }
+  header a {
+    text-decoration: none; }
+
+.customers {
+  padding: 50px; }
+
+.products {
+  height: 100%; }
+  .products .section {
+    padding: 15px;
+    margin-top: 20px;
+    height: 100%;
+    padding: 12px; }
+    .products .section .prodBox {
+      box-shadow: 5px 5px 15px gray;
+      margin: 10px 10px;
+      padding: 8px;
+      text-align: center;
+      display: inline-block; }
+      .products .section .prodBox .delBtn {
+        background-color: red;
+        height: 10px; }
+      .products .section .prodBox p {
+        font-size: 12px; }
+    .products .section h6 {
+      border-bottom: 1px groove black; }
+  .products form textarea {
+    resize: none;
+    width: 190px; }
+
+.container table, .container input, .container textarea, .container button, .container select {
+  box-shadow: 5px 5px 15px gray; }
+.container table {
+  width: 100%; }
+  .container table td, .container table th {
+    padding: 10px;
+    border: 2px ridge gray; }
+
+/*# sourceMappingURL=style.css.map */
